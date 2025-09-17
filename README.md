@@ -4,24 +4,6 @@ This repo contains end‑to‑end (E2E) tests built with [Cypress](https://www.c
 
 ---
 
-## 📁 Project Structure
-
-```
-/
-├── cypress/
-│   ├── e2e/              # E2E test scripts
-│   ├── fixtures/         # Data for negative cases, invalid users, etc.
-│   └── support/
-│       ├── commands.js   # Custom commands (e.g. login) for a better readability and maintainability through code refactoring.
-│       └── other support files
-├── .gitignore
-├── cypress.config.js     # Cypress config including env variables
-├── package.json
-└── README.md
-```
-
----
-
 ## ⚙️ Setup & Requirements
 
 1. Clone this repo:
@@ -47,13 +29,16 @@ This repo contains end‑to‑end (E2E) tests built with [Cypress](https://www.c
 
 ## ▶️ Running the Tests
 
-- To open Cypress in interactive mode:
+- Interactive Mode:
 
   ```bash
-  npx cypress open
+  1. Run npx cypress open to open the Cypress App;
+  2. Select "E2E Testing";
+  3. Select one of the available browsers (e.g., Chrome), and click the "Start" button;
+  4. Select the test file "loginPage.cy.js" and wait for it to finish.
   ```
 
-- To run the tests headlessly (for generating reports):
+- Headless Mode (for generating reports):
 
   ```bash
   npx cypress run --reporter mochawesome
@@ -83,7 +68,7 @@ This repo contains end‑to‑end (E2E) tests built with [Cypress](https://www.c
 - In tests, use:
 
   ```js
-  cy.login(Cypress.env("username"), Cypress.env("password"))
+  cy.login(Cypress.env("email"), Cypress.env("pass"))
   ```
 
 ---
@@ -94,7 +79,7 @@ This repo contains end‑to‑end (E2E) tests built with [Cypress](https://www.c
 
 ---
 
-## 📝 Notes
+## 📝 Notes & Contribution
 
  Feel free to contribute :)
 
