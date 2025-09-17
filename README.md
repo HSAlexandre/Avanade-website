@@ -43,9 +43,6 @@ This repo contains end‑to‑end (E2E) tests built with [Cypress](https://www.c
    email=your_email@example.com
    pass=your_password
    ```
-
-   > ⚠️ Do *not* commit `.env`. It should be in `.gitignore`.
-
 ---
 
 ## ▶️ Running the Tests
