@@ -7,6 +7,7 @@ describe("Login Page", () => {
 
   it("Login can be performed successfuly using valid credentials", () => {
     cy.login(Cypress.env("email"), Cypress.env("pass"));
+    cy.contains("Minhas aplicações").should("be.visible");
   });
 
   it("Warning message returned using no credentials", () => {
